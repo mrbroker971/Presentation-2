@@ -812,3 +812,16 @@ html.portrait .reveal .big-pop { grid-template-columns: 1fr 1fr; row-gap: 32px; 
 .reveal table.paytbl td:nth-child(4), .reveal table.paytbl th:nth-child(4) { text-align: right; font-variant-numeric: tabular-nums; color: var(--muted); }
 .reveal table.paytbl td:nth-child(4) { font-size: 21px; }
 html.portrait .reveal .mg .mb { grid-template-columns: 200px 1fr 220px; }
+
+
+/* === SLIDE 06 · Interactive UAE atlas (screen 1648 × 928, mapped by SVG) === */
+.reveal .slides section.uaeh-slide { background:#f1e6d6; }
+.uaeh-slide .uaeh-stage {position:absolute;inset:0;overflow:hidden;background:#efe5d8;}
+.uaeh-slide .uaeh-svg {width:100%;height:100%;display:block;}
+.uaeh-slide .uaeh-region {fill:transparent;stroke:transparent;stroke-width:3;vector-effect:non-scaling-stroke;cursor:pointer;outline:none;transition:fill .28s ease,stroke .28s ease,opacity .28s ease,filter .28s ease;}
+.uaeh-slide .uaeh-card-hit {fill:transparent;stroke:transparent;stroke-width:2;vector-effect:non-scaling-stroke;cursor:pointer;outline:none;transition:fill .25s ease,stroke .25s ease,filter .25s ease;}
+.uaeh-slide .uaeh-region.uaeh-active {fill:color-mix(in srgb,var(--emirate-color) 52%,transparent);stroke:#fff2ca;stroke-width:3.5;filter:drop-shadow(0 0 11px var(--emirate-color));}
+.uaeh-slide .uaeh-card-hit.uaeh-active {fill:rgba(214,169,98,.17);stroke:var(--emirate-color);stroke-width:2.5;filter:drop-shadow(0 0 9px rgba(175,117,51,.30));}
+.uaeh-slide .uaeh-region:focus-visible,.uaeh-slide .uaeh-card-hit:focus-visible {stroke:#fff;stroke-width:4;}
+.uaeh-slide .uaeh-hint {position:absolute;left:20%;bottom:1.3%;color:#533a1e;background:rgba(255,249,239,.88);font:500 12px/1.2 'Manrope',sans-serif;letter-spacing:.06em;padding:9px 14px;border:1px solid rgba(155,114,67,.3);border-radius:2px;pointer-events:none;opacity:.84;}
+@media (prefers-reduced-motion:reduce) {.uaeh-slide .uaeh-region,.uaeh-slide .uaeh-card-hit{transition:none}}
