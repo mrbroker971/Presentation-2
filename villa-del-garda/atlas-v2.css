@@ -1,0 +1,38 @@
+/* MR Broker · original presentation-native atlas, slide 06 */
+.reveal .slides section.atlas-v2{background:#efe6d7 !important;overflow:hidden;color:#302c29}
+.reveal .atlas-v2 .atlas-layout{inset:0;padding:0;display:grid;grid-template-columns: 66% 34%;width:100%;height:100%;position:absolute;overflow:hidden}
+.atlas-map-panel{position:relative;overflow:hidden;background:#093e45;isolation:isolate}
+.atlas-terrain,.atlas-map-shade,.atlas-overlay{position:absolute;inset:0;width:100%;height:100%}
+.atlas-terrain img{width:100%;height:100%;object-fit:fill;display:block;pointer-events:none}
+.atlas-map-shade{pointer-events:none;z-index:3;background:linear-gradient(90deg,rgba(249,241,224,.93) 0%,rgba(245,235,215,.83) 19%,rgba(245,235,215,.12) 47%,transparent 68%),linear-gradient(0deg,rgba(13,41,42,.26),transparent 30%)}
+.atlas-overlay{z-index:4;overflow:visible}
+.atlas-region{stroke:rgba(255,245,207,.14);stroke-width:2;vector-effect:non-scaling-stroke;fill:transparent;cursor:pointer;transition:fill .3s,stroke .3s,filter .3s;outline:none;pointer-events:all}
+.atlas-v2.is-interacting .atlas-region:not(.active){fill:rgba(2,33,34,.14)}
+.atlas-region.active,.atlas-region:focus-visible{fill:color-mix(in srgb,var(--region) 47%,transparent);stroke:#ffedcb;stroke-width:4;filter:drop-shadow(0px 0px 7px #f9ddb0)}
+.atlas-head{position:absolute;top:75px;left:78px;z-index:6;pointer-events:none;max-width:490px}
+.reveal .atlas-head .atlas-eyebrow{font-family:Montserrat,sans-serif;font-size:17px;letter-spacing:.17em;color:#99774c;font-weight:600}
+.reveal .atlas-head h2{font-family:'Cormorant Garamond',Georgia,serif;font-weight:500;font-size:162px;line-height:.95;margin:38px 0 20px;color:#251f1c;letter-spacing:-.045em;text-transform:none}
+.reveal .atlas-head p{font-family:Montserrat,sans-serif;font-size:38px;letter-spacing:.09em;line-height:1.4;font-weight:500;color:#241e1a}
+.reveal .atlas-tag{display:block;font-family:Montserrat,sans-serif;margin-top:45px;max-width:360px;line-height:1.5;text-transform:uppercase;font-size:14px;letter-spacing:.08em;color:#6e645c}
+.atlas-watermark{position:absolute;bottom:54px;left:75px;z-index:5;font:500 19px Montserrat,sans-serif;letter-spacing:.19em;color:#fff9df;text-shadow:0 2px 8px #243c41}
+.atlas-watermark span{font-size:12px;letter-spacing:.26em;display:block;margin-top:4px}
+.atlas-selected{position:absolute;bottom:55px;right:50px;z-index:6;font:600 18px Montserrat,sans-serif;background:rgba(12,43,43,.67);border:1px solid rgba(250,240,208,.4);border-radius:30px;color:white;padding:13px 23px;backdrop-filter:blur(12px)}
+.atlas-menu{background:#f6f0e6;position:relative;display:flex;flex-direction:column;min-width:0;box-shadow:-14px 0 35px rgba(37,31,21,.15);z-index:7}
+.atlas-menu-head{height:92px;display:flex;align-items:center;justify-content:space-between;padding:0 45px;border-bottom:1px solid #d4c3ab;color:#92744d;font:600 18px Montserrat,sans-serif;letter-spacing:.13em}
+.atlas-menu-head b{font-weight:500;font-size:16px}
+.atlas-items{display:flex;flex:1;flex-direction:column;min-height:0}
+.atlas-item{all:unset;display:flex;align-items:center;gap:24px;box-sizing:border-box;cursor:pointer;flex:1;min-height:0;position:relative;padding:13px 38px 13px 45px;border-bottom:1px solid #d8cbb8;transition:background .25s,box-shadow .25s;outline:none}
+.atlas-item.active,.atlas-item:focus-visible{background:color-mix(in srgb,var(--region) 17%,#f6f0e6);box-shadow:inset 7px 0 0 var(--region)}
+.atlas-no{font:500 44px 'Cormorant Garamond',Georgia,serif;color:#b09365;align-self:center;width:62px;flex-shrink:0}
+.atlas-item.active .atlas-no{color:#573b26}
+.atlas-copy{display:flex;flex:1;flex-direction:column;gap:10px;min-width:0}
+.atlas-copy strong{font:500 34px 'Cormorant Garamond',Georgia,serif;line-height:1.05;color:#28231f;white-space:nowrap}
+.atlas-copy small{font:400 16px/1.38 Montserrat,sans-serif;color:#665d54;max-width:390px}
+.atlas-arrow{color:#a99273;font:26px Georgia;opacity:.45;transition:transform .25s}
+.atlas-item.active .atlas-arrow{opacity:1;transform:translate(4px,-4px)}
+.atlas-menu-bottom{padding:22px 45px;display:flex;justify-content:space-between;font:500 12px Montserrat,sans-serif;letter-spacing:.19em;color:#9a8568}
+.atlas-v2 .foot{display:none!important}
+@media(prefers-reduced-motion:reduce){.atlas-region,.atlas-item{transition:none}}
+/* Reveal scroll/portrait stays readable */
+html.portrait .reveal .atlas-v2 .atlas-layout{grid-template-columns:1fr;grid-template-rows:53% 47%}
+html.portrait .atlas-head{top:110px}.portrait .atlas-menu-head{height:75px}.portrait .atlas-items{display:grid;grid-template-columns:1fr 1fr;grid-auto-rows:1fr}.portrait .atlas-item{padding:15px 24px}.portrait .atlas-copy strong{font-size:29px}.portrait .atlas-copy small{font-size:13px}.portrait .atlas-menu-bottom{padding:10px 25px}
