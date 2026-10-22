@@ -814,7 +814,7 @@
     const f = document.createElement('div');
     f.className = 'foot';
     f.innerHTML = '<span class="brand"><img src="../assets/brand/logo-mark.png" alt="">Empire City Real Estate</span><span class="pg">' + String(i + 1).padStart(2, '0') + '</span>';
-    s.querySelector('.slide').appendChild(f);
+    const host = s.querySelector('.slide'); if (host) host.appendChild(f);
   });
 
   // theme switching: ?theme=empire or key T
